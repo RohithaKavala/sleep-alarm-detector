@@ -125,18 +125,6 @@ Once the eyes reopen, the alarm stops and monitoring resumes.
 
 ---
 
-# 📸 Project Screenshots
-
-## 🟢 Awake State
-
-> Add screenshot here
-
-## 🔴 Alert State
-
-> Add screenshot here
-
----
-
 # 🎯 Skills Demonstrated
 
 ✅ Computer Vision
@@ -157,7 +145,7 @@ Once the eyes reopen, the alarm stops and monitoring resumes.
 
 ---
 
-# 🚀 Future Improvements
+# Future Improvements
 
 * 📊 Drowsiness Statistics Dashboard
 * 👁️ Blink Counter
@@ -185,9 +173,6 @@ Through this project, I gained hands-on experience with:
 
 ## Rohitha Kavala
 
-**Final Year B.Tech CSE Student**
-
-Passionate about **Software Development**, **Web Technologies**, and building impactful real-world applications.
 
 ---
 
