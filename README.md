@@ -1,69 +1,135 @@
-# 😴 Sleep Alarm Detector
+😴 Sleep Alarm Detector
+🚨 Real-Time Drowsiness Detection Using Computer Vision
 
-Detects when you fall asleep at your desk using your webcam. Shows a **green** face box when you're awake and a **red** pulsing alert when your eyes are closed too long — and plays an alarm sound to wake you up.
+Detects prolonged eye closure through a webcam and instantly triggers an alarm to prevent sleep, loss of focus, and microsleep incidents.
 
----
 
-## Requirements
 
-- Python 3.8+
-- Webcam
 
-Install dependencies:
 
-```bash
-pip install mediapipe opencv-python numpy pygame
-```
 
----
 
-## Setup
+🌟 Overview
 
-1. **Clone / download** this folder.
-2. **Add your alarm sound** — place any `.mp3` or `.wav` file in the project folder and update the path in `sleep_alarm.py`:
+Sleep Alarm Detector is a real-time computer vision application that continuously monitors eye activity using a webcam and facial landmark tracking.
 
-```python
-ALARM_SOUND_FILE = r"/full/path/to/your/alarm.mp3"
-```
+When the user's eyes remain closed beyond a defined threshold, the system immediately:
 
-3. **(Optional) Tune the settings** at the top of `sleep_alarm.py`:
+🚨 Activates an alarm
+🔴 Displays a visual warning overlay
+👁️ Tracks eye closure duration
+⚡ Responds in real time
 
-| Variable | Default | Description |
-|---|---|---|
-| `EAR_THRESHOLD` | `0.22` | Eye openness threshold — lower = less sensitive |
-| `EYE_CLOSED_SECONDS` | `2.5` | Seconds eyes must stay closed to trigger alarm |
+This project demonstrates practical applications of Computer Vision, Facial Landmark Detection, and Human State Monitoring.
 
----
+✨ Key Features
+Feature	Description
+👁️ Eye Tracking	Monitors eye activity in real time
+🧠 Face Mesh Detection	Uses MediaPipe's facial landmark model
+⚡ Instant Detection	Detects prolonged eye closure
+🔊 Alarm System	Plays warning sound automatically
+📷 Webcam Monitoring	Live video processing
+🎯 EAR Analysis	Eye Aspect Ratio based detection
+🚨 Alert Overlay	Visual danger indication
+💻 Lightweight	Fast and efficient execution
+🛠️ Technology Stack
+Technology	Purpose
+Python	Core Application Development
+OpenCV	Real-Time Video Processing
+MediaPipe	Facial Landmark Detection
+NumPy	Mathematical Calculations
+Pygame	Alarm Playback
+📂 Project Structure
+sleep-alarm-detector/
+│
+├── sleep_alarm.py
+├── alarm.mp3
+├── requirements.txt
+└── README.md
+⚙️ Installation
+1️⃣ Clone Repository
+git clone https://github.com/RohithaKavala/sleep-alarm-detector.git
+cd sleep-alarm-detector
+2️⃣ Install Dependencies
+pip install -r requirements.txt
+▶️ Run the Application
+python sleep_alarm.py
 
-## Run
+Press Q to exit.
 
-```bash
-python3 sleep_alarm.py
-```
+🧠 How It Works
+Step 1 — Face Detection
 
-Press **Q** to quit.
+MediaPipe Face Mesh detects facial landmarks from the webcam feed.
 
----
+Step 2 — Eye Landmark Extraction
 
-## How It Works
+Eye-related facial landmarks are extracted in real time.
 
-| Status | Signal | What's shown |
-|---|---|---|
-| 👁️ Eyes open | 🟢 Green | Green face box + "AWAKE" pill |
-| 😴 Eyes closing | 🟠 Orange bar | Progress bar filling up |
-| 🚨 Eyes closed ≥ 2.5s | 🔴 Red | Pulsing red overlay + alarm sound |
+Step 3 — EAR Calculation
 
-- Uses **MediaPipe Face Mesh** to track 468 facial landmarks in real time.
-- Computes the **Eye Aspect Ratio (EAR)** for both eyes — when EAR drops below the threshold, the countdown starts.
-- Alarm loops until you open your eyes.
+The Eye Aspect Ratio (EAR) is calculated continuously.
 
----
+Step 4 — Drowsiness Detection
 
-## Troubleshooting
+When EAR remains below the threshold for a predefined duration:
 
-| Problem | Fix |
-|---|---|
-| Black screen / no camera | Change `cv2.VideoCapture(1)` to `cv2.VideoCapture(0)` in `sleep_alarm.py` |
-| Alarm not playing | Check the file path in `ALARM_SOUND_FILE` is correct |
-| Too many false triggers | Increase `EAR_THRESHOLD` to `0.25` |
-| Alarm fires too quickly | Increase `EYE_CLOSED_SECONDS` to `3.0` or higher |
+🔴 Alert mode activates
+🔊 Alarm starts playing
+🚨 Visual warning appears
+Step 5 — Recovery
+
+Once the eyes reopen, the alarm stops and monitoring resumes.
+
+📸 Project Screenshots
+🟢 Awake State
+
+Add screenshot here
+
+🔴 Alert State
+
+Add screenshot here
+
+🎯 Skills Demonstrated
+
+✅ Computer Vision
+
+✅ Real-Time Video Processing
+
+✅ Facial Landmark Tracking
+
+✅ MediaPipe Integration
+
+✅ OpenCV Applications
+
+✅ Event-Driven Programming
+
+✅ Python Development
+
+✅ Human State Monitoring
+
+🚀 Future Improvements
+📊 Drowsiness Statistics Dashboard
+👁️ Blink Counter
+📁 CSV Activity Logging
+🎨 Improved User Interface
+🔔 Multiple Alarm Options
+🌐 Web Dashboard Integration
+💡 What I Learned
+
+Through this project, I gained hands-on experience with:
+
+Real-time webcam applications
+Computer vision workflows
+MediaPipe Face Mesh
+Eye Aspect Ratio (EAR) analysis
+Alarm and event systems
+Practical Python development
+👨‍💻 Author
+Rohitha Kavala
+
+Final Year B.Tech CSE Student
+
+Passionate about Software Development, Web Technologies, and building impactful real-world applications.
+
+⭐ If you found this project interesting, consider giving it a star!
