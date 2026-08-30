@@ -145,30 +145,6 @@ Once the eyes reopen, the alarm stops and monitoring resumes.
 
 ---
 
-# Future Improvements
-
-* 📊 Drowsiness Statistics Dashboard
-* 👁️ Blink Counter
-* 📁 CSV Activity Logging
-* 🎨 Improved User Interface
-* 🔔 Multiple Alarm Options
-* 🌐 Web Dashboard Integration
-
----
-
-# 💡 What I Learned
-
-Through this project, I gained hands-on experience with:
-
-* Real-time webcam applications
-* Computer vision workflows
-* MediaPipe Face Mesh
-* Eye Aspect Ratio (EAR) analysis
-* Alarm and event systems
-* Practical Python development
-
----
-
 # 👨‍💻 Author
 
 ## Rohitha Kavala
